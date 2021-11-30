@@ -1,0 +1,1131 @@
+{
+	"info": {
+		"_postman_id": "25170359-a670-4177-a801-65b28bb66ef7",
+		"name": "apartment rental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"zakaria\",\n    \"email\" : \"zakaria@gmail.com\",\n    \"password\" : \"12345678\",\n    \"role\" : \"owner\",\n    \"identityNumber\" : \"111111111111111\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Owner register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"ibrahim\",\n    \"email\" : \"hima@gmail.com\",\n    \"password\" : \"12345678\",\n    \"role\" : \"owner\",\n    \"identityNumber\" : \"111111111111111\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/auth/register",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "325"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"145-z59NgyiqK+0MTSmwWNeBVtXLwaw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Oct 2021 16:53:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"responseTimestamp\": \"2021-10-30T16:53:38.470Z\",\n    \"statusCode\": 200,\n    \"data\": {\n        \"role\": \"owner\",\n        \"status\": true,\n        \"_id\": \"617d789209b7da2dc1b0eb4c\",\n        \"name\": \"ibrahim\",\n        \"email\": \"hima@gmail.com\",\n        \"identityNumber\": \"111111111111111\",\n        \"identityImages\": [],\n        \"createdAt\": \"2021-10-30T16:53:38.383Z\",\n        \"updatedAt\": \"2021-10-30T16:53:38.383Z\"\n    }\n}"
+						},
+						{
+							"name": "Student",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"ahmed\",\n    \"email\" : \"ahmed3@gmail.com\",\n    \"password\" : \"12345678\",\n    \"role\" : \"tenant\",\n    \"identityNumber\" : \"111111111111111\",\n    \"isStudent\" : true,\n    \"faculty\" : \"617ecf5119a1e164a01d52fa\",\n    \"university\" : \"617ecf5119a1e164a01d52fc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/auth/register",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "420"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a4-WH/fSlbOVZCCE0zeUnbUQA+Uv4s\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Oct 2021 17:28:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"responseTimestamp\": \"2021-10-31T17:28:26.645Z\",\n    \"statusCode\": 200,\n    \"data\": {\n        \"role\": \"tenant\",\n        \"status\": true,\n        \"_id\": \"617ed23aab27006bce4d4d32\",\n        \"name\": \"ahmed\",\n        \"email\": \"ahmed3@gmail.com\",\n        \"identityNumber\": \"111111111111111\",\n        \"isStudent\": true,\n        \"faculty\": \"617ecf5119a1e164a01d52fa\",\n        \"university\": \"617ecf5119a1e164a01d52fc\",\n        \"identityImages\": [],\n        \"createdAt\": \"2021-10-31T17:28:26.576Z\",\n        \"updatedAt\": \"2021-10-31T17:28:26.576Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = pm.response.json();\r",
+									"pm.environment.set('token', jsonData.data.token)\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"zakaria@gmail.com\",\n    \"password\" : \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTdiMTE5YTUxN2MwNjE0YTBjMjQ1Y2MiLCJlbWFpbCI6ImlicmFoaW1AZ21haWwuY29tIiwibmFtZSI6ImlicmFoaW0iLCJyb2xlIjoib3duZXIiLCJpYXQiOjE2MzU0NTU1MTksImV4cCI6MTYzNTYyODMxOX0.FSsmeIFzb_qfhUG4R_tXroiRIin1ScuCJJ46zLjBSns",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer tw;lk;ltre;",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/auth/logout",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\" : \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/changepassword",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"changepassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"hima@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/forgotPassword",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"ibrahim@gmail.com\",\r\n    \"password\" : \"newpassword12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/resetPassword/7be5a95e19ef111120c15ef004a035814c4c9fd76f4c336ff9e7afcd8d5dc688",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"resetPassword",
+								"7be5a95e19ef111120c15ef004a035814c4c9fd76f4c336ff9e7afcd8d5dc688"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Owner",
+			"item": [
+				{
+					"name": "Apartment",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/owners/apartments?limit=10&skip=0&mnprice=600&mxprice=1000&city=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"owners",
+										"apartments"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "mnprice",
+											"value": "600"
+										},
+										{
+											"key": "mxprice",
+											"value": "1000"
+										},
+										{
+											"key": "city",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"title\":\"madientNasr\",\r\n    \"isForFamily\":true,\r\n    \"type\": \"entire\",\r\n     \"description\": \"hello world\",\r\n     \"price\" : 400,\r\n     \"n_of_rooms\" : 4,\r\n     \"furnished\" : false,\r\n     \"hasRefrigerator\": true,\r\n     \"maximum_people\" : 4,\r\n     \"near_places\":\"Total\",\r\n     \"n_of_beds\":8,\r\n     \"isForStudents\": true,\r\n     \"maxStudents\": 4,\r\n     \"isActive\": true,\r\n     \"city\" : 3,\r\n     \"location\": \"something\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/owners/apartments/create",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"owners",
+										"apartments",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "read",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/owners/apartments/61926aba31f7821eb0c1430a",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"owners",
+										"apartments",
+										"61926aba31f7821eb0c1430a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Barca\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/owners/apartments/618d61c93f8e286067e48b40",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"owners",
+										"apartments",
+										"618d61c93f8e286067e48b40"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/owners/apartments/6193987ab465e733bcc28bbf",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"owners",
+										"apartments",
+										"6193987ab465e733bcc28bbf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addImage",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/zakaria/Pictures/Screenshot from 2021-10-17 18-28-00.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/owners/apartments/618d4eec52f171271c4a7110/images",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"owners",
+										"apartments",
+										"618d4eec52f171271c4a7110",
+										"images"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "upload identity images",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "identityImages",
+									"type": "file",
+									"src": "/home/zakaria/Desktop/1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/owners/upload/identityimages",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"owners",
+								"upload",
+								"identityimages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "owner profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/owners/618d5b46bebf0e4aa6ec7131/profile",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"owners",
+								"618d5b46bebf0e4aa6ec7131",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Apartment",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/apartments?limit=10&skip=0&mxprice=1500&mnprice=400&city=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"apartments"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "mxprice",
+									"value": "1500"
+								},
+								{
+									"key": "mnprice",
+									"value": "400"
+								},
+								{
+									"key": "city",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/apartments/61956a442b768459eb2b7b09/comments?limit=2&skip=0",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"apartments",
+								"61956a442b768459eb2b7b09",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index specific owner apartments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/apartments/owners/618c4412fe5d26d06ae98754?limit=10&skip=0&mnprice=600&mxprice=1000&city=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"apartments",
+								"owners",
+								"618c4412fe5d26d06ae98754"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "mnprice",
+									"value": "600"
+								},
+								{
+									"key": "mxprice",
+									"value": "1000"
+								},
+								{
+									"key": "city",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/apartments/6193b905647c101ca465eba8",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"apartments",
+								"6193b905647c101ca465eba8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search for place",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/apartments/place/a",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"apartments",
+								"place",
+								"a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/users/61926a2e31f7821eb0c14307",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"61926a2e31f7821eb0c14307"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"good apartment view \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/apartments/comments/61956a442b768459eb2b7b09",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"apartments",
+								"comments",
+								"61956a442b768459eb2b7b09"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/apartments/comments/61956a592b768459eb2b7b0c",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"apartments",
+								"comments",
+								"61956a592b768459eb2b7b0c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"bad apartment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/apartments/comments/61956a862b768459eb2b7b0e",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"apartments",
+								"comments",
+								"61956a862b768459eb2b7b0e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Evaluate",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rate\" : 4,\r\n    \"description\": \"Very Good man\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/evaluate/618d5b46bebf0e4aa6ec7131",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"evaluate",
+								"618d5b46bebf0e4aa6ec7131"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rate\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/evaluate/61964aa4a828bd8a93855456",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"evaluate",
+								"61964aa4a828bd8a93855456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Owner Evaluations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/evaluate/617ed2a25b72366cef263b7c?limit=4&skip=0",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"evaluate",
+								"617ed2a25b72366cef263b7c"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "4"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "identityImages",
+							"type": "file",
+							"src": "/home/zakaria/Desktop/1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/owners/test",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"owners",
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
